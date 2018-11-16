@@ -16,15 +16,21 @@
       <div class="row">
         <div class="col-6">
           <h2>Sign up for our app</h2>
-          <form method='post' action='/register'>
+          <form method='post' action='/register' novalidate >
             <div class="form-group">
               <label for="reg-name">User Name</label>
-              <input name='name' type="text" class="form-control" id="reg-name">
+              <input name='name' type="text" class="form-control is-valid" id="reg-name">
+              <small class="valid-feedback">
+                Dope!
+              </small>
             </div>
             <div class="form-group">
               <label for="reg-email">Email address</label>
-              <input name='email' type="email" class="form-control" id="reg-email" aria-describedby="emailHelp" >
+              <input name='email' type="email" class="form-control is-invalid" id="reg-email" aria-describedby="emailHelp" >
               <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+              <div class="invalid-feedback">
+                Email must be an anagram
+              </div>
             </div>
             <div class="form-group">
               <label for="reg-password">Password</label>
