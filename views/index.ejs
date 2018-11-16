@@ -3,8 +3,8 @@
   <head>
     <title>Home Page</title>
 
-    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
-    <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
     <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
@@ -12,6 +12,33 @@
   </head>
 
   <body>
-    <h1>Hello World!</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <h2>Sign up for our app</h2>
+          <form method='post' action='/register'>
+            <div class="form-group">
+              <label for="reg-name">User Name</label>
+              <input name='name' type="text" class="form-control" id="reg-name">
+            </div>
+            <div class="form-group">
+              <label for="reg-email">Email address</label>
+              <input name='email' type="email" class="form-control" id="reg-email" aria-describedby="emailHelp" >
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="reg-password">Password</label>
+              <input name='password' type="password" class="form-control" id="reg-password">
+            </div>
+            <div class="form-group">
+              <label for="reg-password-confirm">Password Confirm</label>
+              <input type="password_confirm" class="form-control" id="reg-password-confirm">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
